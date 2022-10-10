@@ -1,3 +1,9 @@
-.nav-bar {
+.navigation {
+    background-color: #0D0D0D;
+}
+
+.navigation a {
     text-decoration: none;
+    margin-right: 20px;
+    color: #FF5E19;
 }
