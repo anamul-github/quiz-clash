@@ -5,11 +5,11 @@ const Topic = ({ topic }) => {
     const { logo, name } = topic;
     return (
         <div className='col'>
-            <div className="card">
-                <img className='img-fluid p-2 logo shadow-sm' src={logo} alt="" />
-                <div className='d-flex justify-content-between p-3'>
+            <div className="card card-style">
+                <img className='img-fluid logo' src={logo} alt="" />
+                <div className='d-flex justify-content-between p-3 mt-2'>
                     <div>
-                        <h3>{name}</h3>
+                        <h4 className='text-white'>{name}</h4>
 
                     </div>
                     <div>
@@ -17,10 +17,6 @@ const Topic = ({ topic }) => {
                     </div>
                 </div>
             </div>
-            <div className="card-body">
-
-            </div>
-
         </div>
     );
 };

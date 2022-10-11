@@ -1,5 +1,21 @@
+.heading-container {
+    padding: 10px;
+    margin: 10px;
+}
+
+.heading-container img {
+    max-height: 150px;
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+.cards-container {
+    background-color: rgb(179, 76, 179);
+}
+
 @media only screen and (max-width: 576px) {
-    .cards {
+    .cards-container {
         padding: 0 !important;
         width: 100% !important;
     }
