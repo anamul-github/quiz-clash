@@ -1,7 +1,7 @@
 import React from 'react';
 import './Topic.css';
 
-const Topic = ({ topic }) => {
+const Topic = ({ topic, handleQuiz }) => {
     const { logo, name } = topic;
     return (
         <div className='col'>
@@ -13,7 +13,7 @@ const Topic = ({ topic }) => {
 
                     </div>
                     <div>
-                        <button type="button" className="btn btn-primary">Start Quiz</button>
+                        <button onClick={() => handleQuiz(topic)} type="button" className="btn btn-primary">Start Quiz</button>
                     </div>
                 </div>
             </div>

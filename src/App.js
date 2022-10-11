@@ -3,9 +3,10 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from './layouts/Main';
 import Home from './components/Home/Home';
-import Header from './components/Header/Header';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import AllQuiz from './components/AllQuiz/AllQuiz';
+import Topic from './components/Topic/Topic';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -20,8 +21,13 @@ function App() {
           element: <Home></Home>
         },
         {
-          path: '/header',
-          element: <Header></Header>
+          path: '/topic',
+          element: <Topic></Topic>
+        },
+        {
+          path: '/allQuiz',
+          loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+          element: <AllQuiz></AllQuiz>
         },
         {
           path: '/statistics',
@@ -33,6 +39,10 @@ function App() {
           element: <Blog></Blog>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <div className='text-center fs-1 fw-bolder mt-3 text-danger'>This route is not found!!! <br /> <br /> 404</div>
     }
   ])
   return (
