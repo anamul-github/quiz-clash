@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <div className='heading-container'>
                 <img className='img-fluid' src="heading.jpg" alt="heading-pic" />
-                <h2 className='text-primary text-center'>Browse through our categories to find the right quiz for your skill set.</h2>
+                <h2 className='text-center'>Browse through our categories to find the right quiz for your skill set.</h2>
             </div>
             <div className="row row-cols-1 row-cols-md-4 p-5 cards-container">
                 {
