@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const router = createBrowserRouter([
