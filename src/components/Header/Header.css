@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+.title {
+    color: #FF5E19;
+}
+
 .links a {
     text-decoration: none;
     margin-right: 20px;
@@ -13,10 +17,11 @@
     .header {
         display: block !important;
         padding-top: 20px;
-        text-align: center;
+        text-align: center !important;
     }
 
     .links {
         padding-top: 10px !important;
+        /* text-align: left !important; */
     }
 }

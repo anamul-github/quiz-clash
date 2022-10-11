@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className='d-flex justify-content-between align-items-center header px-5'>
             <div>
-                <h2 className='text-primary'>Quiz Clash</h2>
+                <h2 className='title fw-bolder'>Quiz Clash</h2>
             </div>
             <div>
                 <nav className='text-center links p-5'>

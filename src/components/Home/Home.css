@@ -1,4 +1,6 @@
-.topics {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+@media only screen and (max-width: 576px) {
+    .cards {
+        padding: 0 !important;
+        width: 100% !important;
+    }
 }
