@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Topic.css';
 
-const Topic = ({ topic, handleQuiz }) => {
+const Topic = ({ topic }) => {
     const { id, logo, name } = topic;
     return (
         <div className='col'>
@@ -14,7 +14,7 @@ const Topic = ({ topic, handleQuiz }) => {
 
                     </div>
                     <div>
-                        <Link to={`/topic/${id}`}><button onClick={() => handleQuiz(topic)} type="button" className="btn btn-primary">Start Quiz</button></Link>
+                        <Link to={`/topic/${id}`}><button type="button" className="btn btn-primary">Start Quiz</button></Link>
                     </div>
                 </div>
             </div>
