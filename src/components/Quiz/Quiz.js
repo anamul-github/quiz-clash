@@ -26,7 +26,7 @@ const Quiz = ({ quiz }) => {
         <div >
             <div className='d-flex justify-content-between pe-5'>
                 <div>
-                    <h4 className='px-5 py-2'>Q:{question.slice(3, -4)}</h4>
+                    <h4 className='px-5 py-2'>Q: {question.slice(3, -4)}</h4>
                 </div>
                 <div>
                     <p onClick={eyeClick}><FontAwesomeIcon className='' icon={faEye}></FontAwesomeIcon></p>
@@ -34,8 +34,8 @@ const Quiz = ({ quiz }) => {
             </div>
             <h5 className='px-5 ms-3'>
                 {options.map(option =>
-                    <div>
-                        <button className='p-2 m-2 ' onClick={() => notify(option)}>{option}</button>
+                    <div className='mb-3'>
+                        <button className='p-2 m-2' onClick={() => notify(option)}>{option}</button>
                         <ToastContainer></ToastContainer>
                     </div>)}
 
