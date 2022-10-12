@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 const Quiz = ({ quiz }) => {
-    console.log(quiz);
     const { question, options, correctAnswer } = quiz;
 
+    // toast for clicking options
     const notify = (option) => toast(option === correctAnswer ? 'Your answer is correct' : 'Your answer is wrong', {
         position: "top-center",
         autoClose: 5000,
@@ -19,14 +19,17 @@ const Quiz = ({ quiz }) => {
         progress: undefined,
     });
 
+    // toast for eye icon
+    const eyeClick = () => toast(correctAnswer);
+
     return (
         <div >
             <div className='d-flex justify-content-between pe-5'>
                 <div>
-                    <h3 className='px-5 py-2'>Q:{question.slice(3, -4)}</h3>
+                    <h4 className='px-5 py-2'>Q:{question.slice(3, -4)}</h4>
                 </div>
                 <div>
-                    <p><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></p>
+                    <p onClick={eyeClick}><FontAwesomeIcon className='' icon={faEye}></FontAwesomeIcon></p>
                 </div>
             </div>
             <h5 className='px-5 ms-3'>
