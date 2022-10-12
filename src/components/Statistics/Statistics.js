@@ -7,7 +7,7 @@ const Statistics = () => {
     data = data.data;
     return (
         <div>
-            <h2 className='my-3 ms-5'>Total number of Quiz by each skills: </h2>
+            <h2 className='my-3 mb-5 ms-5'>Total number of Quiz by each skills: </h2>
             <BarChart width={370} height={280} data={data}>
                 <Bar dataKey="total" fill="#82ca9d" />
                 <XAxis dataKey="name" />

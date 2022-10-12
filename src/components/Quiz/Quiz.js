@@ -3,12 +3,7 @@ import React from 'react';
 const Quiz = ({ quiz }) => {
     console.log(quiz);
     const { question, options, correctAnswer } = quiz;
-    const handleClick = (click) => {
-        if (click === correctAnswer) {
-            alert("Right");
-        }
 
-    }
     return (
         <div>
             <h2>{correctAnswer}</h2>
@@ -17,7 +12,19 @@ const Quiz = ({ quiz }) => {
                 {options.map(option =>
                     <div>
                         <input type="radio" id="html" name="fav_language" value="HTML" />
-                        <label onclick={handleClick()}>{option}</label>
+                        <label>{option}</label>
+
+                        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="..." class="rounded me-2" alt="..." />
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, world! This is a toast message.
+                            </div>
+                        </div>
 
                     </div>)}
 
