@@ -3,8 +3,10 @@ import React from 'react';
 const Quiz = ({ quiz }) => {
     console.log(quiz);
     const { question, options, correctAnswer } = quiz;
-    const handleClick = () => {
-
+    const handleClick = (click) => {
+        if (click === correctAnswer) {
+            alert("Right");
+        }
 
     }
     return (
@@ -15,12 +17,11 @@ const Quiz = ({ quiz }) => {
                 {options.map(option =>
                     <div>
                         <input type="radio" id="html" name="fav_language" value="HTML" />
-                        <label onclick={() => handleClick}>{option}</label>
+                        <label onclick={handleClick()}>{option}</label>
 
                     </div>)}
 
             </h5>
-
         </div>
     );
 };

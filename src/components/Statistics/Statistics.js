@@ -7,8 +7,8 @@ const Statistics = () => {
     data = data.data;
     return (
         <div>
-            <h2>Statistics of total number of Quiz </h2>
-            <BarChart width={500} height={300} data={data}>
+            <h2 className='my-3 ms-5'>Total number of Quiz by each skills: </h2>
+            <BarChart width={370} height={280} data={data}>
                 <Bar dataKey="total" fill="#82ca9d" />
                 <XAxis dataKey="name" />
                 <YAxis />
